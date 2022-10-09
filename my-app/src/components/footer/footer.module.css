@@ -6,6 +6,8 @@
     padding-top: 30px;
     margin: 0 30px;
     border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 .bye {
     text-align: center;
