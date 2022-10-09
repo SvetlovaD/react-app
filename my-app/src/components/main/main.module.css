@@ -5,4 +5,5 @@ body {
     height: 500px;
     display: grid;
     grid-template-columns: 1fr 4fr;
+    margin: 40px 30px;
 }

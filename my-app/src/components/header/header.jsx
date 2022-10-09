@@ -1,10 +1,10 @@
 import React from 'react';
 import style from './header.module.css';
-import logo from '../img/bubble-chat.png';
-import home from '../img/home.png';
-import user from '../img/user.png';
-import settings from '../img/settings-sliders.png';
-import bell from '../img/bell.png';
+import logo from './img/bubble-chat.png';
+import home from './img/home.png';
+import user from './img/user.png';
+import settings from './img/settings-sliders.png';
+import bell from './img/bell.png';
 
 
 const Logotype = () => {
