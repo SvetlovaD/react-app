@@ -14,9 +14,8 @@ import Settings from './components/main/settings/settings';
 function App() {
   return (
     <BrowserRouter>
-    <div>
+    <div className='Body'>
         <Header />
-        Test for git
         <Main>
         <Nav/>
         <Routes>
