@@ -2,8 +2,8 @@ body {
     margin: 0;
 }
 .main {
-    height: 500px;
+    height: auto;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    margin: 40px 30px;
+    margin: 30px 30px;
 }
