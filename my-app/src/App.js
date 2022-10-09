@@ -1,34 +1,37 @@
-import logo from './logo.svg';
+import React from 'react';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'; 
 import './App.css';
-import logoReact from './img/React.jpg';
-
-const Header = () => {
-  return (
-    <div>
-      <h1>Hello world</h1>
-    </div>
-    
-  )
-}
-
-const Main = () => {
-  return (
-    <div>
-      <h3>Hello world from React</h3>
-      <img src={logoReact} alt="logo2" width={600} height={300} />
-    </div>
-  )
-}
+import Header from './components/header/header';
+import Main from './components/main/main';
+import Profile from './components/main/profile/profile';
+import Nav from './components/nav/nav';
+import Footer from './components/footer/footer';
+import Messages from './components/main/messages/messages';
+import Videos from './components/main/videos/videos';
+import Friends from './components/main/friends/friends';
+import Settings from './components/main/settings/settings';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Header/>
-        <Main/>
-      </header>
+    <BrowserRouter>
+    <div>
+        <Header />
+        Test for git
+        <Main>
+        <Nav/>
+        <Routes>
+        <Route exact path="" element = {<Profile/>}/>
+        <Route path='/profile' element={<Profile/>}/>
+        <Route path='/messages' element={<Messages/>}/>
+        <Route path='/friends' element={<Friends/>}/>
+        <Route path='/videos' element={<Videos/>}/>
+        <Route path='/settings' element={<Settings/>}/>
+        </Routes>
+        </Main>
+        <Footer/>
     </div>
+    </BrowserRouter>
+    
   );
 }
 

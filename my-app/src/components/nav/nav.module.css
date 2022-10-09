@@ -1,0 +1,10 @@
+.nav {
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+.nav a {
+    color: white;
+    margin: 15px auto;
+}
