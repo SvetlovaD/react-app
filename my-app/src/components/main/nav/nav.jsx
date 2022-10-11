@@ -6,7 +6,7 @@ import messages from './img/envelope.png';
 import friends from './img/users-alt.png';
 import news from './img/layout-fluid.png';
 import videos from './img/play-alt.png';
-import girl from '../img/girl.png';
+import girl from './img/girl.png';
 
 const Avatar = () => {
     return (
@@ -36,11 +36,11 @@ const Nav = () => {
             </div>
             <div className= {style.navItems}>
                 <img src={news} alt="" className={style.navIcons}/>
-            <NavLink to="/videos">News Feed</NavLink>
+            <NavLink to="/news">News Feed</NavLink>
             </div>
             <div className= {style.navItems}>
                 <img src={videos} alt="" className={style.navIcons}/>
-            <NavLink to="/settings">Videos</NavLink>
+            <NavLink to="/videos">Videos</NavLink>
             </div>
             </div>
         </div>
