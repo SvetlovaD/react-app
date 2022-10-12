@@ -18,4 +18,5 @@
 .videosWrapper iframe {
     width: 360px;
     height: 220px;
+    border-radius: 10px;
 }

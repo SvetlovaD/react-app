@@ -11,7 +11,7 @@ import Videos from './components/main/videos/videos';
 import Friends from './components/main/friends/friends';
 import NewsFeed from './components/main/news feed/news';
 
-function App() {
+function App(props) {
   return (
     <BrowserRouter>
     <div className='Body'>
@@ -22,7 +22,7 @@ function App() {
         <Routes>
         <Route exact path="" element = {<Profile/>}/>
         <Route path='/profile' element={<Profile/>}/>
-        <Route path='/messages' element={<Messages/>}/>
+        <Route path='/messages' element={<Messages names={props.lists.users} messages={props.lists.dialogs}/>}/>
         <Route path='/friends' element={<Friends/>}/>
         <Route path='/news' element={<NewsFeed/>}/>
         <Route path='/videos' element={<Videos/>}/>
