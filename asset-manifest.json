@@ -1,15 +1,22 @@
 {
   "files": {
-    "main.css": "/react-app/static/css/main.b00c5b21.css",
-    "main.js": "/react-app/static/js/main.1cede602.js",
+    "main.css": "/react-app/static/css/main.d41c8710.css",
+    "main.js": "/react-app/static/js/main.de10b312.js",
     "static/js/787.28cb0dcd.chunk.js": "/react-app/static/js/787.28cb0dcd.chunk.js",
+    "static/media/girl.png": "/react-app/static/media/girl.d841563740a35a43f26e.png",
+    "static/media/bubble-chat.png": "/react-app/static/media/bubble-chat.ee066cb637c4d79ebab7.png",
+    "static/media/user.png": "/react-app/static/media/user.5cdfd5220aa1731cfa3e.png",
+    "static/media/bell.png": "/react-app/static/media/bell.5ef4efed7f8812008e47.png",
+    "static/media/settings-sliders.png": "/react-app/static/media/settings-sliders.6a4e2b2728496758c425.png",
+    "static/media/users-alt.png": "/react-app/static/media/users-alt.cafac2dc0213f885050e.png",
+    "static/media/like.png": "/react-app/static/media/like.69bfb771c34f0e223c26.png",
     "index.html": "/react-app/index.html",
-    "main.b00c5b21.css.map": "/react-app/static/css/main.b00c5b21.css.map",
-    "main.1cede602.js.map": "/react-app/static/js/main.1cede602.js.map",
+    "main.d41c8710.css.map": "/react-app/static/css/main.d41c8710.css.map",
+    "main.de10b312.js.map": "/react-app/static/js/main.de10b312.js.map",
     "787.28cb0dcd.chunk.js.map": "/react-app/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b00c5b21.css",
-    "static/js/main.1cede602.js"
+    "static/css/main.d41c8710.css",
+    "static/js/main.de10b312.js"
   ]
 }
