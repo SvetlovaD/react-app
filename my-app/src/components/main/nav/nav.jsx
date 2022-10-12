@@ -18,6 +18,7 @@ const Avatar = () => {
 }
 
 const Nav = () => {
+
     return (
         <div className={style.nav}>
             <Avatar/>

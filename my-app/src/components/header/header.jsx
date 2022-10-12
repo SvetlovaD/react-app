@@ -23,8 +23,9 @@ const Buttons = () => {
       <div className={style.buttonsWrapper}>
       <div className={style.iconsWrapper}><img src={home} className={style.icons}/></div>
       <div className={style.iconsWrapper}><img src={user} className={style.icons}/></div>
-      <div className={style.iconsWrapper}><img src={settings} className={style.icons}/></div>
       <div className={style.iconsWrapper}><img src={bell} className={style.icons}/></div>
+      <div className={style.iconsWrapper}><img src={settings} className={style.icons}/></div>
+  
       <button className={style.loginButton}>Log in</button>
       </div>
     </div>

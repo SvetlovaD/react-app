@@ -20,8 +20,8 @@ function App(props) {
         <Nav/>
         
         <Routes>
-        <Route exact path="" element = {<Profile/>}/>
-        <Route path='/profile' element={<Profile/>}/>
+        {/* <Route exact path='/profile' element = {<Profile/>}/> */}
+        <Route path='/profile' element={<Profile posts={props.lists.posts}/>}/>
         <Route path='/messages' element={<Messages names={props.lists.users} messages={props.lists.dialogs}/>}/>
         <Route path='/friends' element={<Friends/>}/>
         <Route path='/news' element={<NewsFeed/>}/>

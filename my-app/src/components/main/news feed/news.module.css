@@ -1,6 +1,7 @@
 .settings {
-    background-color: green;
+    background-color: white;
     text-align: center;
     font-size: 25px;
-    color: white;
+    color: black;
+    border-radius: 10px;
 }
