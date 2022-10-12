@@ -4,7 +4,7 @@ import style from './news.module.css';
 const NewsFeed = () => {
     return (
         <div className={style.settings}>
-            News Feed
+            <h2>News Feed</h2>
         </div>
     )
 }
