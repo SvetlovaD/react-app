@@ -10,28 +10,27 @@ import Messages from './components/main/messages/messages';
 import Videos from './components/main/videos/videos';
 import Friends from './components/main/friends/friends';
 import NewsFeed from './components/main/news feed/news';
+import PostsContainer from './components/main/profile/postContainer';
+import ChatContainer from './components/main/messages/messagesContainer';
 
 function App(props) {
   return (
-    <BrowserRouter>
     <div className='Body'>
         <Header />
         <Main>
         <Nav/>
         
         <Routes>
-        {/* <Route exact path='/profile' element = {<Profile/>}/> */}
-        <Route path='/profile' element={<Profile posts={props.lists.posts}/>}/>
-        <Route path='/messages' element={<Messages names={props.lists.users} messages={props.lists.dialogs}/>}/>
-        <Route path='/friends' element={<Friends/>}/>
-        <Route path='/news' element={<NewsFeed/>}/>
-        <Route path='/videos' element={<Videos/>}/>
+        <Route path='react-app/profile' element={<PostsContainer />}/>
+        <Route path='react-app/messages' element={<ChatContainer />}/>
+        <Route path='react-app/friends' element={<Friends/>}/>
+        <Route path='react-app/news' element={<NewsFeed/>}/>
+        <Route path='react-app/videos' element={<Videos/>}/>
         </Routes>
     
         </Main>
         <Footer/>
     </div>
-    </BrowserRouter>
     
   );
 }

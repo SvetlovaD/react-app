@@ -25,23 +25,23 @@ const Nav = () => {
             <div className={style.itemsWrapper}>
             <div className= {style.navItems}>
                 <img src={profile} alt="" className={style.navIcons}/>
-            <NavLink to="/profile">Profile</NavLink>
+            <NavLink to="react-app/profile">Profile</NavLink>
             </div>
             <div className= {style.navItems}>
                 <img src={messages} alt="" className={style.navIcons}/>
-            <NavLink to="/messages">Messages</NavLink>
+            <NavLink to="react-app/messages">Messages</NavLink>
             </div>
             <div className= {style.navItems}>
                 <img src={friends} alt="" className={style.navIcons}/>
-            <NavLink to="/friends">Friends</NavLink>
+            <NavLink to="react-app/friends">Friends</NavLink>
             </div>
             <div className= {style.navItems}>
                 <img src={news} alt="" className={style.navIcons}/>
-            <NavLink to="/news">News Feed</NavLink>
+            <NavLink to="react-app/news">News Feed</NavLink>
             </div>
             <div className= {style.navItems}>
                 <img src={videos} alt="" className={style.navIcons}/>
-            <NavLink to="/videos">Videos</NavLink>
+            <NavLink to="react-app/videos">Videos</NavLink>
             </div>
             </div>
         </div>

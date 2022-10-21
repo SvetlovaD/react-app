@@ -4,6 +4,8 @@ import girl from '../nav/img/girl.png';
 import like from './img/like.png';
 
 
+
+
 const Posts = (props) => {
   return (
     <div className={style.posts}>
@@ -19,14 +21,22 @@ const Posts = (props) => {
 
 
 const Profile = (props) => {
-   let getPosts = props.posts.map(post => <Posts text={post.text} likes={post.likes}/>)
+   let getPosts = props.posts.slice().reverse().map(post => <Posts text={post.text} likes={post.likes}/>)
+   let newPostElement = React.createRef(); 
+   let onAddPost = () => {
+    props.addPost();
+}
+let onPostChange = () => {
+    let text = newPostElement.current.value;
+    props.updateNewPostText(text);
+}
     return (
       <div className={style.profile}>
         <h2>Profile</h2>
         <div className={style.publish}>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <textarea onChange={onPostChange} ref={newPostElement}></textarea>
           <div>
-          <button>Post</button>
+          <button onClick={onAddPost}>Post</button>
           </div>
         </div>
         <div>
@@ -35,6 +45,5 @@ const Profile = (props) => {
       </div>
     )
   }
-
 
 export default Profile;   

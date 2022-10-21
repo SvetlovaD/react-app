@@ -17,6 +17,11 @@
     margin: 15px 20px;
     
 }
+.messages h4 {
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-size: 22px;
+}
 .people {
     border: 2px solid black;
     border-radius: 10px;
@@ -43,7 +48,7 @@
 .names .desc {
     font-size: 17px;
     text-decoration: none;
-    margin-top: 5px;
+    margin: 5px 5px;
     color: black;
 }
 .names:hover {
@@ -60,4 +65,55 @@
     font-size: 26px;
     text-align: center;
     margin-top: 280px;
+}
+.descMessage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.messages .message  {
+    margin: 10px 15px;
+    background-color: rgb(206, 211, 211);
+    padding: 10px 5px;
+    border-radius: 10px;
+}
+.messages .message p {
+
+    margin: 5px 15px;
+    text-align: left;
+    font-size: 18px;
+}
+.messages .message .time {
+    font-size: 15px;
+}
+.messages textarea {
+    width: 550px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 15px;
+    font-size: 15px;
+}
+.messageSend {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+}
+.messages button {
+    height: 33px;
+    width: 65px;
+    margin: 4px 10px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    background-color: rgb(42, 111, 248);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.messages button:hover {
+    transform: scale(1.1);
+    background-color: rgb(235, 235, 17);
+    color: black;
 }
