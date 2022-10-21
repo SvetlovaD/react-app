@@ -12,6 +12,7 @@ import Friends from './components/main/friends/friends';
 import NewsFeed from './components/main/news feed/news';
 import PostsContainer from './components/main/profile/postContainer';
 import ChatContainer from './components/main/messages/messagesContainer';
+import FriendsContainer from './components/main/friends/friendsContainer';
 
 function App(props) {
   return (
@@ -23,7 +24,7 @@ function App(props) {
         <Routes>
         <Route path='react-app/profile' element={<PostsContainer />}/>
         <Route path='react-app/messages' element={<ChatContainer />}/>
-        <Route path='react-app/friends' element={<Friends/>}/>
+        <Route path='react-app/friends' element={<FriendsContainer />}/>
         <Route path='react-app/news' element={<NewsFeed/>}/>
         <Route path='react-app/videos' element={<Videos/>}/>
         </Routes>
