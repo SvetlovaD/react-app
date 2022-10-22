@@ -1,11 +1,11 @@
 {
-  "main.css": "/react-app/static/css/main.b53b6548.chunk.css",
-  "main.js": "/react-app/static/js/main.5282129a.chunk.js",
-  "main.js.map": "/react-app/static/js/main.5282129a.chunk.js.map",
+  "main.css": "/react-app/static/css/main.45e84ca9.chunk.css",
+  "main.js": "/react-app/static/js/main.e5075c2c.chunk.js",
+  "main.js.map": "/react-app/static/js/main.e5075c2c.chunk.js.map",
   "static/js/1.f643efff.chunk.js": "/react-app/static/js/1.f643efff.chunk.js",
   "static/js/1.f643efff.chunk.js.map": "/react-app/static/js/1.f643efff.chunk.js.map",
-  "static/js/2.eb7cc197.chunk.js": "/react-app/static/js/2.eb7cc197.chunk.js",
-  "static/js/2.eb7cc197.chunk.js.map": "/react-app/static/js/2.eb7cc197.chunk.js.map",
+  "static/js/2.36f7a936.chunk.js": "/react-app/static/js/2.36f7a936.chunk.js",
+  "static/js/2.36f7a936.chunk.js.map": "/react-app/static/js/2.36f7a936.chunk.js.map",
   "runtime~main.js": "/react-app/static/js/runtime~main.1541cfe8.js",
   "runtime~main.js.map": "/react-app/static/js/runtime~main.1541cfe8.js.map",
   "static/media/girl.png": "/react-app/static/media/girl.62d8fdd0.png",
@@ -22,8 +22,8 @@
   "static/media/Screenshot_5.png": "/react-app/static/media/Screenshot_5.5ea6a23d.png",
   "static/media/Screenshot_10.png": "/react-app/static/media/Screenshot_10.0d7f0db8.png",
   "static/media/Screenshot_6.png": "/react-app/static/media/Screenshot_6.2e05853f.png",
-  "static/css/main.b53b6548.chunk.css.map": "/react-app/static/css/main.b53b6548.chunk.css.map",
+  "static/css/main.45e84ca9.chunk.css.map": "/react-app/static/css/main.45e84ca9.chunk.css.map",
   "index.html": "/react-app/index.html",
-  "precache-manifest.26c87f73262d03f32aeead9a7792881e.js": "/react-app/precache-manifest.26c87f73262d03f32aeead9a7792881e.js",
+  "precache-manifest.30d5cd7b55b3381d5f8dd7e8c7f7d00a.js": "/react-app/precache-manifest.30d5cd7b55b3381d5f8dd7e8c7f7d00a.js",
   "service-worker.js": "/react-app/service-worker.js"
 }
