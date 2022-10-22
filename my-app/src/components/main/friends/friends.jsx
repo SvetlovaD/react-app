@@ -7,6 +7,7 @@ import avatar4 from './img/Screenshot_4.png';
 import avatar5 from './img/Screenshot_5.png';
 import avatar6 from './img/Screenshot_10.png';
 import avatar7 from './img/Screenshot_6.png';
+import { NavLink, Route, Routes} from "react-router-dom";
 
 const Friends = (props) => {
 
@@ -70,31 +71,46 @@ const Friends = (props) => {
             }
         ]);
     }
+    
+    let friendFollow = props.friends.filter(function (user){ return user.followed == true});
 
+    let followed = friendFollow.map(user => <Friend id={user.id} avatar={user.avatar} followed={user.followed} fullName={user.fullName} location={user.location.country} followUser={user.followUser} unfollowUser={user.unfollowUser}/>);
+
+    let allUsers = props.friends.map(user => <Friend id={user.id} avatar={user.avatar} followed={user.followed} fullName={user.fullName} location={user.location.country} followUser={user.followUser} unfollowUser={user.unfollowUser}/>);
 
     return (
         <div className={style.friends}>
-            <h2>Friends</h2>
+            <div>
+              <NavLink to="/react-app/friends/followed"><button className={style.btnFriends}>Friends</button></NavLink>
+               <NavLink to="/react-app/friends/allusers"><button className={style.btnFriends}>All users</button></NavLink>
+            </div>
             <div className={style.usersWrapper}>
-            {props.friends.map(user => <div key={user.id} className={style.User}>
+            <Routes>
+                <Route path="/react-app/friends/followed" element={followed}/>
+                <Route path="/react-app/friends/allusers" element={allUsers}/>
+            </Routes>
+        </div>
+        </div>
+    )
+}
+
+const Friend = (props) => {
+    return (
+        <div key={props.id} className={style.User}>
                     <div className={style.description}>
-                        <img src={user.avatar} alt="photo"/>
-                    <div className={style.fullName}>{user.fullName}</div>
+                        <img src={props.avatar} alt="photo"/>
+                    <div className={style.fullName}>{props.fullName}</div>
                     </div>
-                    <div>{user.followed}</div>
-                    <div className={style.location}>{user.location.country}</div>
+                    <div>{props.followed}</div>
+                    <div className={style.location}>{props.location}</div>
                     <div>
-                        {user.followed
-                            ? <button onClick={() => {props.followUser(user.id)}}>Unfollow</button>
-                            : <button onClick={() => {props.unfollowUser(user.id)}}>Follow</button>
+                        {props.followed
+                            ? <button onClick={() => {props.followUser(props.id)}}>Unfollow</button>
+                            : <button onClick={() => {props.unfollowUser(props.id)}}>Follow</button>
                         }
 
                     </div>
-
-                </div>)
-            }
-        </div>
-        </div>
+                </div>
     )
 }
 

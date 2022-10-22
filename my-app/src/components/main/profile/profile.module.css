@@ -81,3 +81,21 @@
     background-color: rgb(235, 235, 17);
     color: black;
 }
+.textDesc {
+    display: flex;
+    flex-direction: row;
+}
+.textDesc p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    margin-right: 40px;
+}
+.textDesc .name {
+    font-size: 23px;
+    font-weight: 800;
+}
+.textDesc .date {
+    font-size: 17px;
+    font-style: italic;
+    margin-top: 4px;
+}

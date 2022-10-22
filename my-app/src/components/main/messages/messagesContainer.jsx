@@ -7,7 +7,7 @@ let mapStateToProps = (state) => {
     return {
         users: state.dialogPage.users,
         dialogs: state.dialogPage.dialogs,
-        newMessageBody: state.dialogPage.newMessageBody
+        newMessageBody: state.dialogPage.newMessageBody 
     }
 }
 
@@ -16,8 +16,8 @@ let mapDispatchToProps = (dispatch) => {
         updateNewMessageBody: (body) => {
             dispatch(updateNewMessageBodyCreator(body));
         },
-        sendMessage: () => {
-            dispatch(sendMessageCreator());
+        sendMessage: (text) => {
+            dispatch(sendMessageCreator(text));
         }
     }
 }

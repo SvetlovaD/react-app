@@ -25,23 +25,23 @@ const Nav = () => {
             <div className={style.itemsWrapper}>
             <div className= {style.navItems}>
                 <img src={profile} alt="" className={style.navIcons}/>
-            <NavLink to="react-app/profile">Profile</NavLink>
+            <NavLink to="react-app/profile" className = { navData => navData.isActive ? style.active : style.item }>Profile</NavLink>
             </div>
             <div className= {style.navItems}>
                 <img src={messages} alt="" className={style.navIcons}/>
-            <NavLink to="react-app/messages">Messages</NavLink>
+            <NavLink to="react-app/messages" className = { navData => navData.isActive ? style.active : style.item }>Messages</NavLink>
             </div>
             <div className= {style.navItems}>
                 <img src={friends} alt="" className={style.navIcons}/>
-            <NavLink to="react-app/friends">Friends</NavLink>
+            <NavLink to="react-app/friends" className = { navData => navData.isActive ? style.active : style.item }>Friends</NavLink>
             </div>
             <div className= {style.navItems}>
                 <img src={news} alt="" className={style.navIcons}/>
-            <NavLink to="react-app/news">News Feed</NavLink>
+            <NavLink to="react-app/news" className = { navData => navData.isActive ? style.active : style.item }>News Feed</NavLink>
             </div>
             <div className= {style.navItems}>
                 <img src={videos} alt="" className={style.navIcons}/>
-            <NavLink to="react-app/videos">Videos</NavLink>
+            <NavLink to="react-app/videos" className = { navData => navData.isActive ? style.active : style.item }>Videos</NavLink>
             </div>
             </div>
         </div>

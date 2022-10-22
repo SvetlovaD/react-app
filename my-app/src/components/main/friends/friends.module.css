@@ -61,3 +61,23 @@
     transform: scale(1.05);
     background-color: rgb(235, 235, 17);
 }
+.btnFriends {
+    height: 40px;
+    width: 130px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 20px 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    color: white;
+    text-align: center;
+    padding: 3px 0;
+    background-color: rgb(43, 44, 48);
+    font-weight: 400;
+    transition: all 0.4s linear;
+}
+.btnFriends:hover {
+    color: black;
+    background-color: rgb(206, 211, 211);
+    transform: scale(1.03);
+}
