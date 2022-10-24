@@ -78,6 +78,7 @@ const Friends = (props) => {
 
     let allUsers = props.friends.map(user => <Friend id={user.id} avatar={user.avatar} followed={user.followed} fullName={user.fullName} location={user.location.country} followUser={user.followUser} unfollowUser={user.unfollowUser}/>);
 
+
     return (
         <div className={style.friends}>
             <div>
@@ -86,6 +87,7 @@ const Friends = (props) => {
             </div>
             <div className={style.usersWrapper}>
             <Routes>
+                <Route path="" element={followed}/>
                 <Route path="/react-app/friends/followed" element={followed}/>
                 <Route path="/react-app/friends/allusers" element={allUsers}/>
             </Routes>
@@ -95,6 +97,14 @@ const Friends = (props) => {
 }
 
 const Friend = (props) => {
+
+    let followUser = () => {
+        props.followUser(props.id)
+    }
+    let unfollowUser = () => {
+        props.unfollowUser(props.id) 
+    }
+
     return (
         <div key={props.id} className={style.User}>
                     <div className={style.description}>
@@ -105,8 +115,8 @@ const Friend = (props) => {
                     <div className={style.location}>{props.location}</div>
                     <div>
                         {props.followed
-                            ? <button onClick={() => {props.followUser(props.id)}}>Unfollow</button>
-                            : <button onClick={() => {props.unfollowUser(props.id)}}>Follow</button>
+                            ? <button onClick={followUser}>Unfollow</button>
+                            : <button onClick={unfollowUser}>Follow</button>
                         }
 
                     </div>

@@ -1,0 +1,84 @@
+.newsFeed {
+    background-color: white;
+    text-align: center;
+    font-size: 25px;
+    color: black;
+    border-radius: 10px;
+}
+.newsFeed h2 {
+    font-size: 24px;
+    margin: 20px 400px;
+}
+.newsDesc {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding: 15px 15px;
+}
+.newsDesc .avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 3px solid black;
+}
+.likes {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.likes:hover {
+    transform: scale(1.2);
+}
+.newsPhoto {
+    width: 550px;
+    height: 300px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+.newsContainer {
+    width: 65%;
+    margin: 30px auto;
+    background-color: rgb(206, 211, 211);
+    border-radius: 10px;
+}
+.newsName {
+    font-weight: bold;
+    font-size: 21px;
+    cursor: pointer;
+    margin: 0;
+    margin-top: 15px;
+    text-align: left;
+}
+.newsName:hover {
+    text-decoration: underline;
+}
+.newsDate {
+    font-size: 16px;
+    font-style: italic;
+    margin: 0;
+    text-align: left;
+}
+.newsText {
+    background-color: white;
+    margin: 10px 20px;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 22px;
+    padding: 5px 10px;
+}
+.newsLikes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.likesText {
+    margin: 0 7px;
+    margin-bottom: 7px;
+    font-size: 17px;
+    background-color: white;
+    padding: 4px 10px;
+    border-radius: 50%;
+    font-weight: bold;
+}

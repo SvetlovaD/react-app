@@ -8,7 +8,7 @@ let mapStateToProps = (state) => {
         friends: state.friendsPage.users
     }
 }
-let mapDispatchToProps = (dispatch) => {
+let mapDispatchToProps = (dispatch) => { 
     return {
         followUser: (userId) => {
             dispatch(followCreator(userId));

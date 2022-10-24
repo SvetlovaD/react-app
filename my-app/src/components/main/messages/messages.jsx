@@ -81,7 +81,7 @@ const Messages = (props) => {
                    {friends} 
                 </div>
                 <div className={style.dialogs}>
-                    <Routes>
+                    <Routes> 
                         <Route path="" element={<DefaultChatSection/>}/>
                         <Route exact path="user1" element={<Dialogs messages={props.users[0].messages} id = {0} newMessageBody = {newMessageBody} updateNewMessageBody={props.updateNewMessageBody} sendMessage={props.sendMessage}/>}/>
                         <Route exact path="user2" element={<Dialogs messages={props.users[1].messages} id = {1} newMessageBody = {newMessageBody} updateNewMessageBody={props.updateNewMessageBody} sendMessage={props.sendMessage}/>}/>

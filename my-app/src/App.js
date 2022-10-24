@@ -9,10 +9,11 @@ import Footer from './components/footer/footer';
 import Messages from './components/main/messages/messages';
 import Videos from './components/main/videos/videos';
 import Friends from './components/main/friends/friends';
-import NewsFeed from './components/main/news feed/news';
+import NewsFeed from './components/main/news/news';
 import PostsContainer from './components/main/profile/postContainer';
 import ChatContainer from './components/main/messages/messagesContainer';
 import FriendsContainer from './components/main/friends/friendsContainer';
+import NewsContainer from './components/main/news/newsContainer';
 
 function App(props) {
   return (
@@ -20,12 +21,12 @@ function App(props) {
         <Header />
         <Main>
         <Nav/>
-        
         <Routes>
+        <Route path='' element={<PostsContainer />}/> 
         <Route path='react-app/profile' element={<PostsContainer />}/>
         <Route path='react-app/messages' element={<ChatContainer />}/>
         <Route path='react-app/friends' element={<FriendsContainer />}/>
-        <Route path='react-app/news' element={<NewsFeed/>}/>
+        <Route path='react-app/news' element={<NewsContainer/>}/>
         <Route path='react-app/videos' element={<Videos/>}/>
         </Routes>
     

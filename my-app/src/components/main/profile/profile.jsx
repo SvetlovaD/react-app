@@ -4,6 +4,28 @@ import girl from '../nav/img/girl.png';
 import like from './img/like.png';
 
 
+class Counter extends React.Component {
+  constructor(props) {
+      super(props);
+      this.state = {
+          count: props.likes
+        }
+  }
+
+  clickForward = (e) => {
+      this.setState({count: this.state.count + 1})
+  };
+
+
+  render (){
+      return (
+          <div className={style.likes}>
+          <img src={like} alt="" onClick={this.clickForward}/>
+          <p>{this.state.count}</p>
+        </div>
+      )
+  }
+}
 
 
 const Posts = (props) => {
@@ -19,10 +41,7 @@ const Posts = (props) => {
         {props.text}
         </div>
         </div>
-      <div className={style.likes}>
-        <img src={like} alt="" />
-        <p>{props.likes}</p>
-      </div>
+        <Counter likes={props.likes}/>
     </div> 
   )
 }
@@ -54,5 +73,6 @@ let onPostChange = () => {
       </div>
     )
   }
+
 
 export default Profile;   
