@@ -69,13 +69,14 @@ const dialogsReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case UPDATE_NEW_MESSAGE_BODY:
-            console.log(state.dialogs);
+            console.log(state.users[0]);
             return {
                 ...state,
                 newMessageBody: action.body
             }
         case SEND_MESSAGE:
             let body = state.newMessageBody;
+            console.log(state.users[0]);
 
             let dispatchTime = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
             let newMessage = {
@@ -83,11 +84,23 @@ const dialogsReducer = (state = initialState, action) => {
                 text: body,
                 dispatchTime: dispatchTime,
             }
-            return {
-                ...state,
+            let newMessageState = {
                 ...state.users,
                 ...state.users[action.text],
                 messages: [...state.users[action.text].messages, newMessage],
+                newMessageBody: ''
+            }
+
+            return {
+                ...state,
+                users: state.users.map(
+                    user => user.id-1 === Number(action.text)
+                        ? {
+                            ...user,
+                            messages: newMessageState.messages
+                        }
+                        : user
+                ),
                 newMessageBody: ''
             };
         default:

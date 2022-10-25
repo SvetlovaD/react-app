@@ -72,9 +72,11 @@ const Messages = (props) => {
 
     let friends = props.users.map(friend => <Friend name={friend.name} id={friend.id} lastSms={friend.messages.slice(-1)[0]} />);
 
+    let dialogs = props.users.map(item => <Route path={"user" + item.id} element={<Dialogs messages={item.messages} id={item.id - 1} newMessageBody = {newMessageBody} updateNewMessageBody={props.updateNewMessageBody} sendMessage={props.sendMessage}/>}/>)
+
 
     return (
-        <div className={style.messages}>
+        <div className={style.messages}> 
             <h2>Messages</h2>
             <div className={style.dialogsWrapper}>
                 <div className={style.people}>
@@ -83,14 +85,7 @@ const Messages = (props) => {
                 <div className={style.dialogs}>
                     <Routes> 
                         <Route path="" element={<DefaultChatSection/>}/>
-                        <Route exact path="user1" element={<Dialogs messages={props.users[0].messages} id = {0} newMessageBody = {newMessageBody} updateNewMessageBody={props.updateNewMessageBody} sendMessage={props.sendMessage}/>}/>
-                        <Route exact path="user2" element={<Dialogs messages={props.users[1].messages} id = {1} newMessageBody = {newMessageBody} updateNewMessageBody={props.updateNewMessageBody} sendMessage={props.sendMessage}/>}/>
-                        <Route exact path="user3" element={<Dialogs messages={props.users[2].messages} id = {2} newMessageBody = {newMessageBody} updateNewMessageBody={props.updateNewMessageBody} sendMessage={props.sendMessage}/>}/>
-                        <Route exact path="user4" element={<Dialogs messages={props.users[3].messages} id = {3} newMessageBody = {newMessageBody} updateNewMessageBody={props.updateNewMessageBody} sendMessage={props.sendMessage}/>}/>
-                        <Route exact path="user5" element={<Dialogs messages={props.users[4].messages} id = {4} newMessageBody = {newMessageBody} updateNewMessageBody={props.updateNewMessageBody} sendMessage={props.sendMessage}/>}/>
-                        <Route exact path="user6" element={<Dialogs messages={props.users[5].messages} id = {5} newMessageBody = {newMessageBody} updateNewMessageBody={props.updateNewMessageBody} sendMessage={props.sendMessage}/>}/>
-                        <Route exact path="user7" element={<Dialogs messages={props.users[6].messages} id = {6} newMessageBody = {newMessageBody} updateNewMessageBody={props.updateNewMessageBody} sendMessage={props.sendMessage}/>}/>
-                        <Route exact path="user8" element={<Dialogs messages={props.users[7].messages} id = {7} newMessageBody = {newMessageBody} updateNewMessageBody={props.updateNewMessageBody} sendMessage={props.sendMessage}/>}/>
+                        {dialogs}
                     </Routes>
                 </div>
             </div>

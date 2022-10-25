@@ -24,8 +24,8 @@ function App(props) {
         <Routes>
         <Route path='' element={<PostsContainer />}/> 
         <Route path='react-app/profile' element={<PostsContainer />}/>
-        <Route path='react-app/messages' element={<ChatContainer />}/>
-        <Route path='react-app/friends' element={<FriendsContainer />}/>
+        <Route path='react-app/messages/*' element={<ChatContainer />}/>
+        <Route path='react-app/friends/*' element={<FriendsContainer />}/>
         <Route path='react-app/news' element={<NewsContainer/>}/>
         <Route path='react-app/videos' element={<Videos/>}/>
         </Routes>

@@ -74,22 +74,22 @@ const Friends = (props) => {
     
     let friendFollow = props.friends.filter(function (user){ return user.followed == true});
 
-    let followed = friendFollow.map(user => <Friend id={user.id} avatar={user.avatar} followed={user.followed} fullName={user.fullName} location={user.location.country} followUser={user.followUser} unfollowUser={user.unfollowUser}/>);
+    let followed = friendFollow.map(user => <Friend id={user.id} avatar={user.avatar} followed={user.followed} fullName={user.fullName} location={user.location.country} followUser={props.followUser} unfollowUser={props.unfollowUser}/>);
 
-    let allUsers = props.friends.map(user => <Friend id={user.id} avatar={user.avatar} followed={user.followed} fullName={user.fullName} location={user.location.country} followUser={user.followUser} unfollowUser={user.unfollowUser}/>);
+    let allUsers = props.friends.map(user => <Friend id={user.id} avatar={user.avatar} followed={user.followed} fullName={user.fullName} location={user.location.country} followUser={props.followUser} unfollowUser={props.unfollowUser}/>);
 
 
     return (
         <div className={style.friends}>
             <div>
-              <NavLink to="/react-app/friends/followed"><button className={style.btnFriends}>Friends</button></NavLink>
-               <NavLink to="/react-app/friends/allusers"><button className={style.btnFriends}>All users</button></NavLink>
+              <NavLink to="followed"><button className={style.btnFriends}>Friends</button></NavLink>
+               <NavLink to="allusers"><button className={style.btnFriends}>All users</button></NavLink>
             </div>
             <div className={style.usersWrapper}>
             <Routes>
                 <Route path="" element={followed}/>
-                <Route path="/react-app/friends/followed" element={followed}/>
-                <Route path="/react-app/friends/allusers" element={allUsers}/>
+                <Route path="followed" element={followed}/>
+                <Route path="allusers" element={allUsers}/>
             </Routes>
         </div>
         </div>

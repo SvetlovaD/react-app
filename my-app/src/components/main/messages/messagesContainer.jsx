@@ -6,7 +6,6 @@ import {connect} from "react-redux";
 let mapStateToProps = (state) => {
     return {
         users: state.dialogPage.users,
-        dialogs: state.dialogPage.dialogs,
         newMessageBody: state.dialogPage.newMessageBody 
     }
 }
