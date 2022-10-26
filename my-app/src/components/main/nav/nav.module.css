@@ -64,6 +64,7 @@ h2 {
 .active {
     background-color: rgb(235, 235, 17);
     color: black;
+    font-weight: bold;
 }
 a.item {
     background-color: rgb(42, 111, 248);

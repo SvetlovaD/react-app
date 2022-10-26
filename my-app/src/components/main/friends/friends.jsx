@@ -19,6 +19,9 @@ const Friends = (props) => {
                 followed: true,
                 fullName: 'Thomas Hardy',
                 status: 'working',
+                friends: 130,
+                photos: 13,
+                videos: 22,
                 location: {country: 'Kyiv, Ukraine'}
             },
             {
@@ -27,7 +30,10 @@ const Friends = (props) => {
                 followed: true,
                 fullName: 'Benedict Cumberbatch',
                 status: 'working',
-                location: {country: 'Kyiv, Ukraine'}
+                friends: 289,
+                photos: 31,
+                videos: 15,
+                location: {country: 'California, USA'}
             },
             {
                 id: 3,
@@ -35,7 +41,10 @@ const Friends = (props) => {
                 followed: true,
                 fullName: 'Brad Pitt',
                 status: 'working',
-                location: {country: 'Kyiv, Ukraine'}
+                friends: 91,
+                photos: 43,
+                videos: 11,
+                location: {country: 'New York, USA'}
             },
             {
                 id: 4,
@@ -43,7 +52,10 @@ const Friends = (props) => {
                 followed: false,
                 fullName: 'Dwayne Johnson',
                 status: 'working',
-                location: {country: 'Kyiv, Ukraine'}
+                friends: 540,
+                photos: 39,
+                videos: 20,
+                location: {country: 'Rome, Italy'}
             },
             {
                 id: 5,
@@ -51,7 +63,10 @@ const Friends = (props) => {
                 followed: true,
                 fullName: 'Johnny Depp ',
                 status: 'working',
-                location: {country: 'Kyiv, Ukraine'}
+                friends: 311,
+                photos: 50,
+                videos: 21,
+                location: {country: 'Miami, USA'}
             },
             {
                 id: 6,
@@ -59,7 +74,10 @@ const Friends = (props) => {
                 followed: false,
                 fullName: 'Jensen Ackles',
                 status: 'working',
-                location: {country: 'Kyiv, Ukraine'}
+                friends: 301,
+                photos: 29,
+                videos: 7,
+                location: {country: 'London, UK'}
             },
             {
                 id: 7,
@@ -67,16 +85,19 @@ const Friends = (props) => {
                 followed: false,
                 fullName: 'Timothee Chalamet',
                 status: 'working',
-                location: {country: 'Kyiv, Ukraine'}
+                friends: 115,
+                photos: 67,
+                videos: 34,
+                location: {country: 'Chicago, USA'}
             }
         ]);
     }
     
     let friendFollow = props.friends.filter(function (user){ return user.followed == true});
 
-    let followed = friendFollow.map(user => <Friend id={user.id} avatar={user.avatar} followed={user.followed} fullName={user.fullName} location={user.location.country} followUser={props.followUser} unfollowUser={props.unfollowUser}/>);
+    let followed = friendFollow.map(user => <Friend id={user.id} status={user.status} friends={user.friends} photos={user.photos} videos={user.videos} avatar={user.avatar} followed={user.followed} fullName={user.fullName} location={user.location.country} followUser={props.followUser} unfollowUser={props.unfollowUser}/>);
 
-    let allUsers = props.friends.map(user => <Friend id={user.id} avatar={user.avatar} followed={user.followed} fullName={user.fullName} location={user.location.country} followUser={props.followUser} unfollowUser={props.unfollowUser}/>);
+    let allUsers = props.friends.map(user => <Friend id={user.id} status={user.status} friends={user.friends} photos={user.photos} videos={user.videos} avatar={user.avatar} followed={user.followed} fullName={user.fullName} location={user.location.country} followUser={props.followUser} unfollowUser={props.unfollowUser}/>);
 
 
     return (
@@ -105,21 +126,36 @@ const Friend = (props) => {
         props.unfollowUser(props.id) 
     }
 
+    let path = "/react-app/messages/" + "user" + props.id;
+
     return (
         <div key={props.id} className={style.User}>
                     <div className={style.description}>
                         <img src={props.avatar} alt="photo"/>
-                    <div className={style.fullName}>{props.fullName}</div>
+                        <div className={style.userName}>
+                        <div className={style.fullName}>{props.fullName}</div>
+                    <div className={style.location}>{props.location}</div>
+                        </div>
+                    
                     </div>
                     <div>{props.followed}</div>
-                    <div className={style.location}>{props.location}</div>
-                    <div>
+                    <div className={style.userDescWrapper}>
+                      <div className={style.userDesc}><b>Friends:</b> {props.friends}</div>
+                      <div className={style.userDesc}><b>Photos:</b> {props.photos}</div>
+                      <div className={style.userDesc}><b>Videos:</b> {props.videos}</div>
+                      <div className={style.userDesc}><b>Status:</b> {props.status}</div>
+                    </div>
+                    <div className={style.btns}>
+                      <NavLink to={path} className={style.btnMsg}>Message</NavLink>  
+                    <div className={style.btnFollow}>
                         {props.followed
-                            ? <button onClick={followUser}>Unfollow</button>
-                            : <button onClick={unfollowUser}>Follow</button>
+                            ? <button onClick={followUser} className={style.activeBtn}>Unfollow</button>
+                            : <button onClick={unfollowUser} >Follow</button>
                         }
 
                     </div>
+                    </div>
+                    
                 </div>
     )
 }
