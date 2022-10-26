@@ -5,6 +5,7 @@ import home from './img/home.png';
 import user from './img/user.png';
 import settings from './img/settings-sliders.png';
 import bell from './img/bell.png';
+import { NavLink } from 'react-router-dom';
 
 
 const Logotype = () => {
@@ -17,12 +18,14 @@ const Logotype = () => {
 }
 
 const Buttons = () => {
+
+
   return (
     <div className={style.buttons}>
       <input type="text" name='search' placeholder='Search...' className={style.search}/>
       <div className={style.buttonsWrapper}>
-      <div className={style.iconsWrapper}><img src={home} className={style.icons}/></div>
-      <div className={style.iconsWrapper}><img src={user} className={style.icons}/></div>
+     <NavLink to='/react-app/profile' className={style.headerBtns}><div className={style.iconsWrapper}><img src={home} className={style.icons}/></div></NavLink>
+     <NavLink to='/react-app/friends' className={style.headerBtns}><div className={style.iconsWrapper}><img src={user} className={style.icons}/></div></NavLink>
       <div className={style.iconsWrapper}><img src={bell} className={style.icons}/></div>
       <div className={style.iconsWrapper}><img src={settings} className={style.icons}/></div>
   

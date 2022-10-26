@@ -94,3 +94,6 @@ h1 {
     border-radius: 10px;
     font-size: 16px;
 }
+.headerBtns {
+    margin: auto 0;
+}

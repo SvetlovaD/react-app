@@ -14,12 +14,15 @@ import PostsContainer from './components/main/profile/postContainer';
 import ChatContainer from './components/main/messages/messagesContainer';
 import FriendsContainer from './components/main/friends/friendsContainer';
 import NewsContainer from './components/main/news/newsContainer';
+import Login from './components/login/login';
+import MainContainer from './components/main/mainContainer';
 
 function App(props) {
   return (
     <div className='Body'>
         <Header />
         <Main>
+        {/* <Route path='/login*' element={<Login/>}/> */}
         <Nav/>
         <Routes>
         <Route path='' element={<PostsContainer />}/> 
