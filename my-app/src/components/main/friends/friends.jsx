@@ -82,8 +82,8 @@ const Friends = (props) => {
     return (
         <div className={style.friends}>
             <div>
-              <NavLink to="followed"><button className={style.btnFriends}>Friends</button></NavLink>
-               <NavLink to="allusers"><button className={style.btnFriends}>All users</button></NavLink>
+              <NavLink to="followed" className = { navData => navData.isActive ? style.active : style.item }>Friends</NavLink> 
+               <NavLink to="allusers" className = { navData => navData.isActive ? style.active : style.item }>All users</NavLink>
             </div>
             <div className={style.usersWrapper}>
             <Routes>

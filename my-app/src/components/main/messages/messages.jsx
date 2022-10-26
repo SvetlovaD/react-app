@@ -7,8 +7,12 @@ const Message = (props)=> {
     return(
             <div>
                 <div className={style.message}>
-                <p >{props.text}</p>
-                <p className={style.time}>{props.time}</p>
+                    <img src={props.avatar} alt="" className={style.friendImg}/>
+                 <div className={style.messageDesc}>
+                 <p className={style.messageName}>{props.name}</p>   
+                 <p className={style.messageText}>{props.text}</p>
+                 <p className={style.time}>{props.time}</p>
+                </div>   
                 </div>
             </div>
     )
@@ -29,7 +33,7 @@ let onNewMessageChange = (e) => {
     props.updateNewMessageBody(body);
 }
 
-let Messages = props.messages.map(item => <Message id={item.id} text={item.text} time={item.dispatchTime}/>)
+let Messages = props.messages.map(item => <Message id={item.id} text={item.text} time={item.dispatchTime} name={item.name} avatar={item.avatar}/>)
 
     return(
         <div>
@@ -53,15 +57,21 @@ const Friend = (props) => {
     
 
     return (
-        <NavLink  to={path}>
-            <div className={style.names}>
-                <h4>{props.name}</h4>
+        
+        <NavLink  to={path} className = { navData => navData.isActive ? style.active : style.item }>
+          <div className={style.names}>
+            <div className={style.friendDesc}>
+             <img src={props.img} alt="" className={style.friendImg} />   
+            <h4>{props.name}</h4>
+                </div> 
+                
                 <div className={style.descMessage}>
                 <p className={style.desc}>{props.lastSms.text}</p>
                 <p className={style.desc}>{props.lastSms.dispatchTime}</p>
                 </div>
-            </div>
+                </div>
         </NavLink>
+        
     )
 }
 
@@ -70,7 +80,7 @@ const Messages = (props) => {
     
     let newMessageBody = props.newMessageBody;
 
-    let friends = props.users.map(friend => <Friend name={friend.name} id={friend.id} lastSms={friend.messages.slice(-1)[0]} />);
+    let friends = props.users.map(friend => <Friend name={friend.name} img={friend.img} id={friend.id} lastSms={friend.messages.slice(-1)[0]} />);
 
     let dialogs = props.users.map(item => <Route path={"user" + item.id} element={<Dialogs messages={item.messages} id={item.id - 1} newMessageBody = {newMessageBody} updateNewMessageBody={props.updateNewMessageBody} sendMessage={props.sendMessage}/>}/>)
 

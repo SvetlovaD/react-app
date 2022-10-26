@@ -4,6 +4,7 @@
     text-align: center;
     color: white;
     border-radius: 10px;
+    padding-top: 30px;
 }
 .friends h2 {
     font-size: 24px;
@@ -14,6 +15,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 15px;
 }
 .usersWrapper img {
     width: 120px;
@@ -61,7 +63,7 @@
     transform: scale(1.05);
     background-color: rgb(235, 235, 17);
 }
-.btnFriends {
+.friends a {
     height: 40px;
     width: 130px;
     font-size: 20px;
@@ -69,15 +71,22 @@
     margin: 20px 10px;
     border-radius: 10px;
     border: 1px solid black;
-    color: white;
+    
     text-align: center;
-    padding: 3px 0;
-    background-color: rgb(43, 44, 48);
+    padding: 6px 10px;
     font-weight: 400;
-    transition: all 0.4s linear;
+    transition: all 0.5s linear;
 }
-.btnFriends:hover {
+.friends a:hover {
     color: black;
+    background-color: rgb(183, 186, 186);
+    transform: scale(1.1);
+}
+.active {
     background-color: rgb(206, 211, 211);
-    transform: scale(1.03);
+    color: black; 
+}
+a.item {
+    background-color: rgb(43, 44, 48);
+    color: white;
 }

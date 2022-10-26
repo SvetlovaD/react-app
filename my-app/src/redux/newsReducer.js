@@ -11,6 +11,8 @@ import img3 from '../components/main/news/img/Screenshot_2.png';
 import img4 from '../components/main/news/img/Screenshot_3.png';
 import img5 from '../components/main/news/img/Screenshot_4.png';
 import img6 from '../components/main/news/img/Screenshot_5.png';
+import girl from '../components/main/nav/img/girl.png';
+import img7 from '../components/main/news/img/Screenshot_13.png';
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 
@@ -24,7 +26,7 @@ let initialState = {
         {id:5, name:"Johnny Depp", date:"14.10.22 17:01", avatar:avatar5, text: "pov: you're in the passenger seat, hand-feeding the driver fries like a wild horse", img:img5, likes:8},
         {id:6, name:"Jensen Ackles", date:"20.10.22 19:16", avatar:avatar6, text: "I hate how recruiters are always like we need a cover letter and references and a thank you note like ummm i'm pretty sure you need an employee", img:img6, likes:23}
     ],
-    newPostText: ''
+    newText: ''
 }
 
 const newsReducer = (state = initialState, action) => {
@@ -43,6 +45,8 @@ const newsReducer = (state = initialState, action) => {
             let newPost = {
                 id: state.news.length + 1,
                 name: "Kira",
+                avatar:girl,
+                img: img7,
                 date: dateToday,
                 text: state.newPostText,
                 likes: 0
@@ -51,7 +55,7 @@ const newsReducer = (state = initialState, action) => {
             return  {
                 ...state,
                 news: [...state.news, newPost],
-                newPostText: ''
+                newText: ''
             };
         }
         case UPDATE_NEW_POST_TEXT: {

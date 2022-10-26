@@ -13,9 +13,11 @@ const News = (props) => {
                 <p className={style.newsDate}>{props.date}</p>
                 </div>
             </div>
+            <div className={style.newsTextDesc}>
             <p className={style.newsText}>{props.text}</p>
             <div>
                 <img src={props.img} alt="" className={style.newsPhoto}/>
+            </div>
             </div>
             <Counter likes={props.likes}/>
         </div>
@@ -25,7 +27,7 @@ const News = (props) => {
 
 const NewsFeed = (props) => {
 
-    let newsItem = props.news.map(item => <News avatar={item.avatar} name={item.name} date={item.date} text={item.text} img={item.img} likes={item.likes}/>)
+    let newsItem = props.news.slice().reverse().map(item => <News avatar={item.avatar} name={item.name} date={item.date} text={item.text} img={item.img} likes={item.likes}/>)
 
     return (
         <div className={style.newsFeed}>
@@ -45,8 +47,9 @@ class Counter extends React.Component {
     }
 
     clickForward = (e) => {
-        this.setState({count: this.state.count + 1})
+        this.setState({count: this.state.count + 1});
     };
+
 
 
     render (){
